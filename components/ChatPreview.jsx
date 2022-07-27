@@ -1,4 +1,4 @@
-import { Paper, Avatar, createStyles } from "@mantine/core"
+import { Paper, Avatar } from '@mantine/core';
 
 export default function ChatPreview() {
     return (

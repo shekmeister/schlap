@@ -12,19 +12,6 @@ export default function Sidebar() {
                 </div>
                 <ScrollArea style={{ height: '100%' }} scrollbarSize={10}>
                     <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
-                    <ChatPreview />
                 </ScrollArea>
             </div>
         </>
