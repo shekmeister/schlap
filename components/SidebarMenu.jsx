@@ -1,5 +1,4 @@
 import { Menu, createStyles } from '@mantine/core';
-import ActivityMenu from './ActivityMenu'
 import 
 {   RiMore2Fill, 
     RiUserLine, 
@@ -7,7 +6,8 @@ import
     RiMailAddLine, 
     RiSettings4Line, 
     RiPaletteLine, 
-    RiInformationLine 
+    RiInformationLine,
+    RiCheckboxBlankCircleFill 
 } from 'react-icons/ri';
 
 const useStyles = createStyles((theme) => ({
@@ -57,7 +57,7 @@ export default function SidebarMenu() {
                 <Menu.Divider></Menu.Divider>
                 <Menu.Label>User Settings</Menu.Label>
                 <Menu.Item icon={<RiUserLine size={20} />}>View Profile</Menu.Item>
-                <Menu.Item >
+                <Menu.Item icon={<RiInformationLine size={20} />}>
                     <Menu
                         shadow='md'
                         position='right-start'
@@ -69,20 +69,19 @@ export default function SidebarMenu() {
                             item: classes.item,
                             itemLabel: classes.itemLabel,
                             divider: classes.divider,
-                            itemIcon: classes.itemIcon,
                             arrow: classes.arrow,
                         }}
                         withArrow
                     >
                         <Menu.Target>
-                            <Menu.Item component='a' sx={{ padding: '0px' }} icon={<RiInformationLine size={20} />}>Activity status</Menu.Item>
+                            <Menu.Item component='a' sx={{ padding: '0px' }}>Activity status</Menu.Item>
                         </Menu.Target>
                         <Menu.Dropdown>
                             <Menu.Label>Set Status</Menu.Label>
-                            <Menu.Item>Online</Menu.Item>
-                            <Menu.Item>Offline</Menu.Item>
-                            <Menu.Item>Away</Menu.Item>
-                            <Menu.Item>Do not disturb</Menu.Item>
+                            <Menu.Item color='green' icon={<RiCheckboxBlankCircleFill />}>Online</Menu.Item>
+                            <Menu.Item color='gray' icon={<RiCheckboxBlankCircleFill />}>Offline</Menu.Item>
+                            <Menu.Item color='red' icon={<RiCheckboxBlankCircleFill />}>Away</Menu.Item>
+                            <Menu.Item color='yellow' icon={<RiCheckboxBlankCircleFill />}>Do not disturb</Menu.Item>
                         </Menu.Dropdown>
                     </Menu>
                 </Menu.Item>
