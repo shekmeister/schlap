@@ -1,7 +1,6 @@
-import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import type { NextPage } from 'next';
+import Head from 'next/head';
+import Sidebar from '../components/Sidebar';
 
 const Home: NextPage = () => {
   return (
@@ -10,6 +9,11 @@ const Home: NextPage = () => {
         <title>Schlap</title>
         <meta name="description" content="" />
       </Head>
+      <body className='schlap-body h-screen w-screen bg-black'>
+        <div className='schlap-main-container flex'>
+          <Sidebar />
+        </div>
+      </body>
     </>
   )
 }
