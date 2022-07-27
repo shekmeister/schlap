@@ -9,11 +9,11 @@ const Home: NextPage = () => {
         <title>Schlap</title>
         <meta name="description" content="" />
       </Head>
-      <body className='schlap-body h-screen w-screen bg-black'>
+      <main className='schlap-body h-screen w-screen bg-black text-white'>
         <div className='schlap-main-container flex'>
           <Sidebar />
         </div>
-      </body>
+      </main>
     </>
   )
 }
