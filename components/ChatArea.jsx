@@ -28,9 +28,8 @@ export default function ChatArea() {
                 </div>
             </div>
             <ScrollArea
-                
                 scrollbarSize={12}
-                className='bg-black h-96'
+                className='bg-black h-96 flex-1 bg-black'
             >
             </ScrollArea>
             <ChatInput />

@@ -1,36 +1,12 @@
-import { Paper, Input, createStyles, Button } from "@mantine/core";
-
-const useStyles = createStyles((theme) => ({
-    wrapper: {
-        backgroundColor: theme.colors.tailwind.zinc['900'],
-        borderRadius: '5px',
-    },
-    input: {
-        backgroundColor: theme.colors.tailwind.zinc['900'],
-        color: theme.colors.tailwind.zinc['300'],
-        border: '0',
-        padding: '24px 16px',
-        fontSize: '18px',
-        borderRadius: '5px'
-    }
-}));
+import { Paper, createStyles, Button } from "@mantine/core";
+import { RiSendPlane2Line } from 'react-icons/ri';
 
 export default function ChatInput() {
-    const { classes } = useStyles();
     return (
         <>
-            <Paper className='bg-zinc-800 h-16 fixed bottom-0 flex flex-1 w-3/4 items-center pl-6' radius={0}>
-                <Input 
-                    maxLength={200}
-                    placeholder='Type something'
-                    minLength={200}
-                    classNames={{
-                        wrapper: classes.wrapper,
-                        input: classes.input,
-                    }}
-                    className='flex-1'
-                />
-                <Button>Send</Button>
+            <Paper className='bg-zinc-800 h-16 flex justify-around w-full shrink-0 flex-initial items-center' radius={0}>
+                <input className='schlap-chat-input p-3 text-white rounded bg-zinc-900 flex-initial w-96 focus:outline-0 focus:ring-1 focus:ring-zinc-600 transition-all'  type='text' placeholder='Type a message' />
+                <button className='text-zinc-200 bg-black text-bold p-3 pr-6 pl-6 rounded transition text-2xl'><RiSendPlane2Line /></button>
             </Paper>
         </>
     )
