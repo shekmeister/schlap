@@ -9,6 +9,7 @@ import
     RiInformationLine,
     RiCheckboxBlankCircleFill 
 } from 'react-icons/ri';
+import { TbMenu2 } from 'react-icons/tb'
 
 const useStyles = createStyles((theme) => ({
     dropdown: {
@@ -16,6 +17,7 @@ const useStyles = createStyles((theme) => ({
         border: `1px solid ${theme.colors.tailwind.zinc['800']}`
     },
     item: {
+        transition: '0.2s',
         '&[data-hovered]': {
             backgroundColor: theme.colors.tailwind.zinc['600'],
         }
@@ -49,7 +51,7 @@ export default function SidebarMenu() {
             }}
         >
             <Menu.Target>
-                <button className='text-3xl md:text-2xl'><RiMore2Fill /></button>
+                <button className='text-3xl md:text-2xl hover:text-zinc-600 transition-all'><TbMenu2 /></button>
             </Menu.Target>
             <Menu.Dropdown>
                 <Menu.Item icon={<RiMailAddLine size={20} />}>New Chat</Menu.Item>
