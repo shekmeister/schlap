@@ -28,7 +28,8 @@ export default function LoginScreen({ handleClick }) {
                         <h1 className='text-4xl font-bold text-zinc-100 text-center'>Login to schlap</h1>
                         <p className='text-center text-zinc-400'>Welcome Back!</p>
                     </div>
-                    <div className='schlap-login-fg flex flex-col justify-center w-[20rem] mx-auto'>
+                    <form>
+                        <div className='schlap-login-fg flex flex-col justify-center w-[20rem] mx-auto'>
                         <TextInput 
                             type='email' 
                             placeholder='User email' 
@@ -55,7 +56,9 @@ export default function LoginScreen({ handleClick }) {
                         >
                             Login
                         </button>
-                    </div>
+                        </div>
+                    </form>
+                    
                     <div className='schlap-login-footer'>
                         <p className='text-center text-zinc-100'>
                             {"Don't have an account? Create one "}
