@@ -1,7 +1,6 @@
 import { Menu, createStyles } from '@mantine/core';
 import 
-{   RiMore2Fill, 
-    RiUserLine, 
+{   RiUserLine, 
     RiUserAddLine, 
     RiMailAddLine, 
     RiSettings4Line, 
