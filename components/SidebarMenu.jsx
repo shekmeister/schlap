@@ -1,14 +1,14 @@
 import { Menu, createStyles } from '@mantine/core';
-import 
-{   RiUserLine, 
-    RiUserAddLine, 
-    RiMailAddLine, 
-    RiSettings4Line, 
-    RiPaletteLine, 
-    RiInformationLine,
-    RiCheckboxBlankCircleFill 
+import {
+RiUserLine,
+RiUserAddLine,
+RiMailAddLine,
+RiSettings4Line,
+RiPaletteLine,
+RiInformationLine,
+RiCheckboxBlankCircleFill
 } from 'react-icons/ri';
-import { TbMenu2 } from 'react-icons/tb'
+import { TbMenu2 } from 'react-icons/tb';
 
 const useStyles = createStyles((theme) => ({
     dropdown: {
