@@ -1,6 +1,7 @@
 import { Avatar } from '@mantine/core';
 import { BsChevronLeft } from 'react-icons/bs';
 import { RiCheckboxBlankCircleFill, RiPushpinLine } from 'react-icons/ri';
+import { FiMoreVertical } from 'react-icons/fi';
 
 export default function ChatHeader() {
    return (
@@ -21,8 +22,9 @@ export default function ChatHeader() {
                         </span>
                     </div>
                 </div>
-                <div className='chat-area-header-util'>
-                    <button><RiPushpinLine /></button>
+                <div className='chat-area-header-util text-xl fixed right-0 mr-5'>
+                    <button className='mr-3 ml-3'><RiPushpinLine /></button>
+                    <button className='mr-3 ml-3'><FiMoreVertical /></button>
                 </div>
          </div>)
 }
