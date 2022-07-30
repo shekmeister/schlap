@@ -1,4 +1,5 @@
 import { createStyles, TextInput } from '@mantine/core';
+import { useForm } from '@mantine/form';
 
 const useStyles = createStyles(theme => ({
     input: {
@@ -20,6 +21,16 @@ const useStyles = createStyles(theme => ({
 
 export default function LoginScreen({ handleClick }) {
     const { classes } = useStyles(); 
+    const loginForm = useForm({
+        initialValues: {
+            logEmail: '',
+            logPass: '',
+        },
+        initialErrors: {
+            logEmail: undefined,
+            logPass: undefined
+        }
+    })
     return (
         <>
             <div className='schalp-login-bg flex justify-center bg-gradient-to-t from-black via-zinc-900  to-zinc-800 text-white w-screen h-screen'>
@@ -39,6 +50,7 @@ export default function LoginScreen({ handleClick }) {
                                 input: classes.input,
                             }}
                             className='mb-4'
+                            {...loginForm.getInputProps('logEmail')}
                         />
                         <TextInput 
                             type='password' 
@@ -49,6 +61,7 @@ export default function LoginScreen({ handleClick }) {
                                 input: classes.input,
                             }}
                             className='my-4 mb-6'
+                            {...loginForm.getInputProps('logPass')}
                         />
                         <button 
                             className='bg-black to-zinc-800 py-2 text-zinc-200 rounded hover:bg-gradient-to-tl hover:from-black hover:via-black hover:to-zinc-800 hover:ring-zinc-600 hover:ring-1 transition-all'
