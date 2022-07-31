@@ -4,7 +4,7 @@ import { useEffect, useState } from 'react';
 import { Paper } from '@mantine/core';
 import Sidebar from '../components/Sidebar';
 import ChatArea from '../components/ChatArea';
-import LogInForm from '../components/LogInForm';
+import LandingScreen from '../components/LandingScreen';
 
 const Home: NextPage = () => {
   const [userState, setUser] = useState({
@@ -42,7 +42,7 @@ const Home: NextPage = () => {
           </div>
         </main>
       ):(
-        <LogInForm />
+        <LandingScreen />
       )}
     </>
   )
