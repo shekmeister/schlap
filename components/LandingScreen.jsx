@@ -21,7 +21,7 @@ const useStyles = createStyles(theme => ({
     }
 }))
 
-export default function LogInForm() {
+export default function LandingScreen() {
     const [formState, setForm] = useState(true);
     const toSignUp = () => {
         setForm(
