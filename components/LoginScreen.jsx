@@ -1,26 +1,8 @@
 import { createStyles, TextInput } from '@mantine/core';
 import { useForm } from '@mantine/form';
 
-const useStyles = createStyles(theme => ({
-    input: {
-        backgroundColor: theme.colors.tailwind.zinc['700'],
-        color: theme.colors.tailwind.zinc['100'],
-        padding: '1.25rem',
-        outline: 'none',
-        border: 'transparent 2px solid',
-        fontSize: '1rem',
-        transitionTimingFunction: 'cubic-bezier(0.4, 0, 0.2, 1)',
-        transitionDuration: '150ms',
-        '&:focus': {
-            outlineColor: theme.colors.tailwind.zinc['200'],
-            outlineWidth: '1rem',
-            border: `${theme.colors.tailwind.zinc['600']} 2px solid`
-        }
-    }
-}))
-
-export default function LoginScreen({ handleClick }) {
-    const { classes } = useStyles(); 
+export default function LoginScreen({ handleClick, inputStyle }) {
+    const { classes } = inputStyle(); 
     const loginForm = useForm({
         initialValues: {
             logEmail: '',
@@ -34,7 +16,7 @@ export default function LoginScreen({ handleClick }) {
     return (
         <>
             <div className='schalp-login-bg flex justify-center bg-gradient-to-t from-black via-zinc-900  to-zinc-800 text-white w-screen h-screen'>
-                <div className='schlap-login-form mx-auto my-auto h-[30rem] w-[40rem] bg-zinc-900 drop-shadow-lg flex flex-col justify-around text-white'>
+                <div className='schlap-login-form mx-auto my-auto h-[30rem] w-[40rem] bg-zinc-900 drop-shadow-lg flex flex-col justify-around rounded text-white'>
                     <div className='schlap-login-header mt-5'>
                         <h1 className='text-4xl font-bold text-zinc-100 text-center'>Login to schlap</h1>
                         <p className='text-center text-zinc-400'>Welcome Back!</p>
